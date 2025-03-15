@@ -24,6 +24,7 @@ const PostForm: React.FC<PostFormProps> = ({ initialValues, isEditing = false })
   
   const onFinish = async (values: any) => {
     try {
+      const userId = 7765936;
       if (isEditing && initialValues) {
         await updatePost.mutateAsync({
           id: initialValues.id,
@@ -33,7 +34,7 @@ const PostForm: React.FC<PostFormProps> = ({ initialValues, isEditing = false })
       } else {
         await createPost.mutateAsync({
           ...values,
-          user_id: 7765936 // In a real application, this would be the logged-in user's ID
+          user_id: userId // In a real application, this would be the logged-in user's ID
         });
         message.success('Post created successfully');
       }
