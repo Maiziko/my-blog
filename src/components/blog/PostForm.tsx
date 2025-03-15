@@ -24,7 +24,7 @@ const PostForm: React.FC<PostFormProps> = ({ initialValues, isEditing = false })
   
   const onFinish = async (values: any) => {
     try {
-      const userId = 7765936;
+      const userId = 7765376;
       if (isEditing && initialValues) {
         await updatePost.mutateAsync({
           id: initialValues.id,
