@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
     <header className="bg-white shadow">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-2xl font-bold text-blue-600">
+          <Link href="/" className="text-2xl font-bold text-blue-600 no-underline">
             Blog App
           </Link>
 
